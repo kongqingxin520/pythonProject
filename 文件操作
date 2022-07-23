@@ -1,0 +1,8 @@
+import os
+import time
+fileinfo = os.stat("/Users/kongqingxin/Desktop/pythonProject/kongqingxin.txt")
+print("文件的完整路径是：",os.path.abspath("kongqingxin.txt"))
+print("索引号是：",fileinfo.st_ino)
+print("设备名是",fileinfo.st_dev)
+print("文件大小是：",fileinfo.st_size,"Byte")
+print("最后一次修改时间是：",time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(fileinfo.st_mtime)))
