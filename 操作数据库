@@ -1,0 +1,14 @@
+
+import pymysql
+coon = pymysql.connect(
+    host='localhost',
+    user='root',
+    password='00000000',
+    charset='utf8',
+    )
+cursor = coon.cursor()
+cursor.execute('select * from test1.student')
+result = cursor.fetchall()
+print(result)
+cursor.close()
+coon.close()
